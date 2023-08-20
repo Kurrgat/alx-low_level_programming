@@ -7,15 +7,15 @@
 
 int main(void)
 {
-	unsigned long i = 1, j = 2, k;
+	unsigned long long i = 1, j = 2, k;
 	int count = 2;
 
-	printf("%lu, %lu", i, j);
+	printf("%llu, %llu", i, j);
 
 	while (count < 98)
 	{
 	k = i + j;
-	printf(", %lu", k);
+	printf(", %llu", k);
 	i = j;
 	j = k;
 	count++;
