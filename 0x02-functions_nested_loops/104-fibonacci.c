@@ -7,19 +7,36 @@
 
 int main(void)
 {
-	unsigned long long i = 1, j = 2, k;
+	long long i = 1, j = 2, k;
 	int count = 2;
+	long long fib[98];
 
-	printf("%llu, %llu", i, j);
+	fib[0] = i;
+	fib[1] = j;
+
+	long long *p = fib + 2;
 
 	while (count < 98)
 	{
 	k = i + j;
-	printf(", %llu", k);
+	*p = k;
 	i = j;
 	j = k;
+	p++;
 	count++;
 	}
+
+	for (int index = 0; index < 98; index++)
+	{
+	printf("%lld", fib[index]);
+	if (index < 97)
+	{
+	printf(", ");
+	}
+	else
+	{
 	printf("\n");
+	}
+	}
 	return (0);
 }
