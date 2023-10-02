@@ -3,6 +3,7 @@
 
 #include <unistd.h>
 #include <string.h>
+#include <fcntl.h>
 
 /* Function prototypes */
 int _putchar(char c);
