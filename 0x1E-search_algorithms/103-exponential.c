@@ -1,12 +1,14 @@
 #include "search_algos.h"
 
 /**
- * exponential_search - Searches for a value in a sorted array using Exponential search algorithm
+ * exponential_search - Searches for a value in a sorted array
+ * using Exponential search algorithm
  * @array: Pointer to the first element of the array to search in
  * @size: Number of elements in the array
  * @value: Value to search for
  *
- * Return: The index where value is located, or -1 if not found or if array is NULL
+ * Return: The index where value is located,
+ * or -1 if not found or if array is NULL
  */
 int exponential_search(int *array, size_t size, int value)
 {
@@ -18,7 +20,8 @@ int exponential_search(int *array, size_t size, int value)
 
 	while (bound < size && array[bound] < value)
 	{
-		printf("Value checked array[%lu] = [%d]\n", bound, array[bound]);
+		printf("Value checked array[%lu] = [%d]\n", bound,
+		array[bound]);
 		prev_bound = bound;
 		bound *= 2;
 	}
@@ -32,7 +35,8 @@ int exponential_search(int *array, size_t size, int value)
 }
 
 /**
- * binary_search - Searches for a value in a sorted array using Binary search algorithm
+ * binary_search - Searches for a value in a sorted array
+ * using Binary search algorithm
  * @array: Pointer to the first element of the array to search in
  * @low: Lower bound index of the subarray to search in
  * @high: Higher bound index of the subarray to search in
@@ -58,7 +62,7 @@ int binary_search(int *array, size_t low, size_t high, int value)
 		printf("\n");
 
 		if (array[mid] == value)
-			return mid;
+			return (mid);
 		else if (array[mid] < value)
 			low = mid + 1;
 		else
